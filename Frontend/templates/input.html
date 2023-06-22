@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Input Page</title>
+   <link rel="stylesheet" href="../static/styles.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- <link rel="stylesheet" href="../static/Footoff.css"> -->
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+   <header>
+
+      <!-- <a href="#"><img src="/static/landing/logo.png" class="logo"></a> -->
+      <!-- <div class="toggle" onclick="togglemenu()"></div> -->
+
+   </header>
+   <div class="container-wrap">
+      <div class="container">
+         <div class="text">HR Analytics</div>
+         <form action="/output" method="POST">
+            <div class="form-row">
+               <div class="input-data">
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="1">Male</option>
+                     <option value="0">Female</option>
+                     <option value="2">Other</option>
+                  </select>
+               </div>
+               <div class="input-data">
+                  <label for="last_new_job">Last New Job</label>
+                  <select id="last_new_job" name="last_new_job">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="0">1</option>
+                     <option value="1">2</option>
+                     <option value="2">3</option>
+                     <option value="3">4</option>
+                     <option value="4">&gt; 4</option>
+                     <option value="5">5</option>
+                     <option value="6">never</option>
+                  </select>
+                  <!-- <label for="experience">Experience</label>
+                  <select id="experience" name="experience">
+                     <option value="0"> &lt; 1</option>
+                     <option value="1">1-5</option>
+                     <option value="2">6-10</option>
+                     <option value="3">11-15</option>
+                     <option value="4">16-20</option>
+                     <option value="4"> &gt; 20</option>
+                  </select> -->
+               </div>
+              
+            </div>
+            <div class="form-row">
+               <div class="input-data">
+                  <label for="relevent_experience">Relevent Experience</label>
+                  <select id="relevent_experience" name="relevent_experience">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="0">Has relevent experience</option>
+                     <option value="1">No relevent experience</option>
+                  </select>
+               </div>
+               <div class="input-data">
+                  <label for="enrolled_university">Enrolled University</label>
+                  <select id="enrolled_university" name="enrolled_university">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="3">No Enrollment</option>
+                     <option value="0">Full time course</option>
+                     <option value="1">Part time course</option>
+                  </select>
+               </div>
+            </div>
+
+            <div class="form-row">
+               <div class="input-data">
+                  <label for="education_level">Education Level</label>
+                  <select id="education_level" name="education_level">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="0">Graduate</option>
+                     <option value="1">High School</option>
+                     <option value="2">Masters</option>
+                     <option value="3">Phd</option>
+                     <option value="4">Primary School</option>
+                  </select>
+               </div>
+               <div class="input-data">
+                  <label for="major_discipline">Major Discipline</label>
+                  <select id="major_discipline" name="major_discipline">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="0">Arts</option>
+                     <option value="1">Business Degree</option>
+                     <option value="2">Humanities</option>
+                     <option value="3">No Major</option>
+                     <option value="4">Other</option>
+                     <option value="5">STEM</option>
+                  </select>
+               </div>
+            </div>
+
+            <div class="form-row">
+               <div class="input-data">
+                  <label for="company_type">Company Type</label>
+                  <select id="company_type" name="company_type">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="0">Early Stage Startup</option>
+                     <option value="1">Funded Startup</option>
+                     <option value="2">NGO</option>
+                     <option value="4">Public Sector</option>
+                     <option value="5">Pvt Ltd</option>
+                     <option value="3">Other</option>
+                  </select>
+               </div>
+               <div class="input-data">
+                  <label for="company_size">Company Size</label>
+                  <select id="company_size" name="company_size">
+                     <!-- <option value="none" selected disabled hidden>-- Select --</option> -->
+                     <option value="7"> &lt; 10</option>
+                     <option value="0">10-49</option>
+                     <option value="4">50-99</option>
+                     <option value="1">100-500</option>
+                     <option value="5">500-999</option>
+                     <option value="2">1000-4999</option>
+                     <option value="6">5000-9999</option>
+                     <option value="3"> &gt; 10000</option>
+                  </select>
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="input-data">
+                  <input name="city" type="number" step="1" required>
+                  <div class="underline"></div>
+                  <label for="">City Code </label>
+            </div>
+            <div class="input-data">
+               <input name="city_development_index" type="number" step="0.001" required>
+               <div class="underline"></div>
+               <label for="">City Development Index</label>
+            </div>
+            </div>
+            <div class="form-row">
+               <div class="input-data">
+                     <input name="experience" type="number" step="1" required>
+                     <div class="underline"></div>
+                     <label for="">Experience (Years) </label>
+               </div>
+               <div class="input-data">
+                  <input name="training_hours" type="number" step="0.01" required>
+                  <div class="underline"></div>
+                  <label for="">Training Hours</label>
+               </div>
+               
+            </div>
+
+            <div class="form-row">
+               <div class="input-data textarea">
+                  <div class="form-row submit-btn">
+                     <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" value="submit">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+
+   <!-- <footer>
+      <div class="container7">
+         <div class="sec aboutus">
+            <h2>About Us</h2>
+            <p>This is a microorganism analysis system which is build with the help of data science techniques</p>
+
+            <ul class="social">
+               <ul><a href="/facebook">
+                     <img src="/static/landing/facebook.svg" class="sci">
+                  </a></ul>
+
+               <ul><a href="/instagram">
+                     <img src="/static/landing/instagram.svg" class="sci">
+                  </a></ul>
+
+               <ul><a href="/twitter">
+                     <img src="/static/landing/twitter.svg" class="sci">
+                  </a></ul>
+
+            </ul>
+
+         </div>
+
+         <div class="sec quickLinks">
+            <h2>Quick Links</h2>
+            <ul>
+               <li><a href="/land">Home</a></li><br>
+               <li><a href="/statistics">Statistics</a></li><br>
+               <li><a href="/profile">Profile</a></li><br>
+               <li><a href="/">Log Out</a></li><br>
+               <li><a href="/about">About</a></li><br>
+
+            </ul>
+         </div>
+
+         <div class="sec contact">
+            <h2>Contact Info</h2>
+            <ul class="info">
+               <li>
+                  <span><i class="fa fa-map" aria-hidden="true"></i></span>
+                  <span>No 80 Kandy Road<br>Yakkala<br />Sri Lanka
+                  </span>
+               </li><br>
+
+               <li>
+                  <span><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+                  <p><a href="Tel:12930405">+94 71693849</a> <br>
+                     <a href="Tel:12930405">+94 8985647</a>
+                  </p>
+               </li><br>
+
+               <li>
+                  <span><i class="fa fa-envelope-square" aria-hidden="true"></i> </span>
+                  <p><a href="enterprisedvdhouse@gmail.com">test@gmail.com</a></p>
+
+               </li><br>
+
+
+
+            </ul>
+         </div>
+
+      </div>
+
+      <h4 class="copyrightText">Copyright @2022 <a href="#">Test Production</a>. All rights deserved</h4>
+
+   </footer> -->
+   <script>
+
+      // function showOutput{
+      //    if ({data[0]==0}){
+
+      //    }
+      // }
+      function togglemenu() {
+         const menu = document.querySelector('.toggle');
+         const nav = document.querySelector('.nav');
+         menu.classList.toggle('active')
+         nav.classList.toggle('active')
+      }
+   
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+   </script>
+</body>
+
+</html>
